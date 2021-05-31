@@ -20,6 +20,8 @@ mongoose.connect(MONGO_URL)
     });
 
 app.use(morgan('dev'));
+app.use(bodyParser.urlencoded({extended: false})); //TODO use new way
+app.use(bodyParser.json());
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
