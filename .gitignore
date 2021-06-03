@@ -142,3 +142,7 @@ temp/
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,node
+
+#MacOs files
+api/.DS_Store
+.DS_Store
