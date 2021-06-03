@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const challangeRoute = require('./api/routes/challange');
+const userRoute = require('./api/routes/user');
 
 mongoose.set('useCreateIndex', true);
 mongoose.set('useUnifiedTopology', true);
@@ -38,6 +39,7 @@ app.use((req, res, next) => {
 
 
 app.use('/challange', challangeRoute);
+app.use('/challange/user', userRoute);
 
 app.use((req, res, next) => {
     const error = new Error('Not found');
